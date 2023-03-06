@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Hero from "./components/Hero";
+import React from "react";
+import SceneInit from "./lib/SceneInit";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 function App() {
+  // React.useEffect(() => {
+  //   const test = new SceneInit("myThreeJsCanvas");
+  //   test.initialize();
+  //   test.animate();
+  //   const gltfLoader = new GLTFLoader();
+  //   gltfLoader.load("./assets/shiba/scene.gltf", (gltfScene) => {
+  //     test.scene.add(gltfScene.scene);
+  //   });
+  // }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <canvas id="myThreeJsCanvas"></canvas> */}
+      <Hero />
     </div>
   );
 }
